@@ -31,7 +31,7 @@ collections:
         required: false
         hint: Page sections
         widget: list
-        allow_add: false
+        allow_add: true
         types:        
           - name: hero_section
             widget: object
