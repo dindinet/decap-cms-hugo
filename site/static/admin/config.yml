@@ -17,6 +17,135 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - name: hero_section
+            widget: object
+            label: Hero Section
+            fields:
+              - name: title
+                widget: string
+                label: Title
+                required: false
+                hint: The title of the section
+              - name: subtitle
+                widget: string
+                label: Subtitle
+                required: false
+                hint: The subtitle of the section
+              - name: actions
+                widget: list
+                label: Action Buttons
+                required: false
+                fields:
+                  - name: label
+                    widget: string
+                    label: Label
+                    required: true
+                  - name: url
+                    widget: string
+                    label: URL
+                    required: true
+                  - name: style
+                    widget: select
+                    label: Style
+                    required: true
+                    default: link
+                    options:
+                      - link
+                      - primary
+                      - secondary
+                  - name: new_window
+                    widget: boolean
+                    label: Open in new tab/window
+                    required: false
+                    default: false
+                  - name: type
+                    widget: hidden
+                    label: Object Type
+                    required: true
+                    hint: The type of the object
+                    default: action
+              - name: align
+                widget: select
+                label: Align
+                required: false
+                default: left
+                hint: The alignment of the text content
+                options:
+                  - left
+                  - right
+                  - center
+              - name: image
+                widget: image
+                label: Image
+                required: false
+                hint: The image of the section
+              - name: image_position
+                widget: select
+                label: Image Position
+                required: false
+                default: left
+                hint: The position of the image
+                options:
+                  - left
+                  - right
+              - name: has_background
+                widget: boolean
+                label: Enable section background
+                required: false
+                default: false
+              - name: background
+                widget: object
+                label: Background Configuration
+                required: false
+                fields:
+                  - name: background_color
+                    widget: select
+                    label: Background Color
+                    required: false
+                    default: white
+                    hint: The background color of the section
+                    options:
+                      - white
+                      - gray
+                      - blue
+                  - name: background_image
+                    widget: image
+                    label: Background Image
+                    required: false
+                    hint: The image displayed in the background of the section
+                  - name: background_image_opacity
+                    widget: number
+                    label: Background Image Opacity
+                    required: false
+                    hint: >-
+                      An integer between 0 and 100. A lower value makes the
+                      image more transparent.
+                    valueType: int
+                  - name: background_image_size
+                    widget: select
+                    label: Background Image Size
+                    required: false
+                    default: cover
+                    hint: The size of the background image
+                    options:
+                      - auto
+                      - contain
+                      - cover
+                  - name: background_image_repeat
+                    widget: select
+                    label: Background Image Repeat
+                    required: false
+                    default: no-repeat
+                    hint: Repeat the image to cover the whole area.
+                    options:
+                      - repeat
+                      - no-repeat
+              - name: type
+                widget: hidden
+                label: Object Type
+                required: true
+                hint: The type of the object
+                default: hero_section
   - name: "pages"
     label: "Pages"
     files:
