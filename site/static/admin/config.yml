@@ -16,7 +16,7 @@ collections:
       - name: date
         widget: datetime
         label: Publish Date
-      - name: title
+      - name: intro
         widget: text
         label: Intro Blurb
       - name: image
