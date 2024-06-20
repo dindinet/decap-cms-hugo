@@ -5,7 +5,7 @@ export default class PostPreview extends React.Component {
   renderBlock = (block) => {
 
     switch (block.name) {
-      case "hero_section":
+      case "xhero_section":
         return (
           <div className="hero-section">
             <div>{block.title}</div>
@@ -18,7 +18,7 @@ export default class PostPreview extends React.Component {
             <img src={block.src} alt={block.alt} />
           </div>
         );
-      case "content_section":
+      case "xcontent_section":
         return (
           <div className="content-section">
             <div>{block.title}</div>
@@ -52,7 +52,8 @@ export default class PostPreview extends React.Component {
       <div>
 
       {(entry.getIn(["data","sections","types"])|| []).map((type, index) => (
-            <React.Fragment key={index}>{renderBlock(type)}</React.Fragment>
+            
+            <div>{type.name}</div>
           ))}
 
       </div>
