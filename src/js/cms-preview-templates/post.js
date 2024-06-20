@@ -4,8 +4,8 @@ import format from "date-fns/format";
 export default class PostPreview extends React.Component {
   renderBlock = (block) => {
 
-    switch (block.name) {
-      case "xhero_section":
+    switch (block.type) {
+      case "hero_section":
         return (
           <div className="hero-section">
             <div>{block.title}</div>
@@ -18,7 +18,7 @@ export default class PostPreview extends React.Component {
             <img src={block.src} alt={block.alt} />
           </div>
         );
-      case "xcontent_section":
+      case "content_section":
         return (
           <div className="content-section">
             <div>{block.title}</div>
@@ -51,10 +51,11 @@ export default class PostPreview extends React.Component {
       </div>
       <div>
 
-      {(entry.getIn(["data","sections","types"])|| []).map((type, index) => (
+      {(entry.getIn(["data","sections"])|| []).map((section, index) => (
             
-            <div>{type.name}</div>
+            <div>{section.type}</div>
           ))}
+
 
       </div>
     </div>;
