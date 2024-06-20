@@ -4,34 +4,34 @@ import format from "date-fns/format";
 export default class PostPreview extends React.Component {
   renderBlock = (block) => {
 
-    switch (block.type) {
+    switch (block.data.type) {
       case "hero_section":
         return (
           <div className="hero-section">
-            <div>{block.title}</div>
-            <div>{block.subtitle}</div>
+            <div>{block.data.title}</div>
+            <div>{block.data.subtitle}</div>
           </div>
         );
       case "image":
         return (
           <div className="hero-block">
-            <img src={block.src} alt={block.alt} />
+            <img src={block.data.src} alt={block.data.alt} />
           </div>
         );
       case "content_section":
         return (
           <div className="content-section">
-            <div>{block.title}</div>
-            <div>{block.content}</div>
+            <div>{block.data.title}</div>
+            <div>{block.data.content}</div>
           </div>
         );
       // Add more cases for other block types
       default:
         return (
           <div className="default-section">
-            <div  class="titulo">{block.title}</div>
-            <div class="tipo">{block.type}</div>
-            <div  class="nombre">{block.name}</div>
+            <div  class="titulo">{block.data.title}</div>
+            <div class="tipo">{block.data.type}</div>
+            <div  class="nombre">{block.data.name}</div>
             <div>Nothing To See Here</div>
           </div>
         );
@@ -56,7 +56,8 @@ export default class PostPreview extends React.Component {
 
 
       {(this.props.widgetsFor("sections")|| ["nulla"]).map((section, index) => ( 
-        <React.Fragment key={index}>{this.renderBlock(section.getIn(['data']))}</React.Fragment>        
+        
+        <React.Fragment key={index}>{this.renderBlock(section.toJS())}</React.Fragment>        
 
       ))}
 
