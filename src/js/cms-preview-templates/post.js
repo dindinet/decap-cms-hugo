@@ -2,9 +2,9 @@ import React from "react";
 import format from "date-fns/format";
 
 export default class PostPreview extends React.Component {
-  renderBlock = (block) => {
+  renderBlock = (block,thetype) => {
 
-    switch (block.type) {
+    switch (thetype) {
       case "hero_section":
         return (
           <div className="hero-section">
@@ -56,7 +56,7 @@ export default class PostPreview extends React.Component {
 
       {(entry.getIn(["data","sections"])|| []).map((section, index) => (
             
-            <React.Fragment key={index}>{this.renderBlock(section)}</React.Fragment>
+            <React.Fragment key={index}>{this.renderBlock(section, section.type)}</React.Fragment>
           ))}
 
 
