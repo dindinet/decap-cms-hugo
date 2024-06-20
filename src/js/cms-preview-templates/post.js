@@ -55,7 +55,7 @@ export default class PostPreview extends React.Component {
       <div>
 
 
-      {(widgetsFor(entry.getIn(["data", "sections"])|| []).map((section, index) => (         
+      {(this.props.widgetsFor(entry.getIn(["data", "sections"])|| []).map((section, index) => (         
         <div>We are dealing with a type of: {section.type}</div>
       )))}
 
