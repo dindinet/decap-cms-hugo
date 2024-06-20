@@ -56,7 +56,7 @@ export default class PostPreview extends React.Component {
 
 
       {(this.props.widgetsFor("sections")|| ["nulla"]).map((section, index) => ( 
-        <React.Fragment key={index}>{this.renderBlock(section.data)}</React.Fragment>        
+        <React.Fragment key={index}>{this.renderBlock(section.getIn(['data']))}</React.Fragment>        
 
       ))}
 
