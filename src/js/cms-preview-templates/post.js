@@ -3,7 +3,7 @@ import format from "date-fns/format";
 
 export default class PostPreview extends React.Component {
   renderBlock = (block) => {
-    console.log("render blocking "+block.name);
+
     switch (block.name) {
       case "hero_section":
         return (
@@ -27,7 +27,11 @@ export default class PostPreview extends React.Component {
         );
       // Add more cases for other block types
       default:
-        return null;
+        return (
+          <div className="default-section">
+            <div>Nothing To See Here</div>
+          </div>
+        );
     }
   };
   render() {
@@ -48,7 +52,7 @@ export default class PostPreview extends React.Component {
       <div>
 
       {(entry.getIn(["data","sections","types"])|| []).map((type, index) => (
-            <React.Fragment key={index}>{this.renderBlock(type)}</React.Fragment>
+            <React.Fragment key={index}>{renderBlock(type)}</React.Fragment>
           ))}
 
       </div>
