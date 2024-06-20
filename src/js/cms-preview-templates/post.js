@@ -3,6 +3,7 @@ import format from "date-fns/format";
 
 export default class PostPreview extends React.Component {
   renderBlock = (block) => {
+    console.log("render blocking "+block.name);
     switch (block.name) {
       case "hero_section":
         return (
