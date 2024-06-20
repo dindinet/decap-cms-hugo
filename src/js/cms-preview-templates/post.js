@@ -29,6 +29,9 @@ export default class PostPreview extends React.Component {
       default:
         return (
           <div className="default-section">
+            <div  class="titulo">{block.title}</div>
+            <div class="tipo">{block.type}</div>
+            <div  class="nombre">{block.name}</div>
             <div>Nothing To See Here</div>
           </div>
         );
