@@ -11,9 +11,6 @@ sections:
     title: Quisical
     content: >-
       If it were to be more ordinary then Quisical would not describe it.
-
-
-      ![Somwhere unquisical](https://images.unsplash.com/photo-1718703358140-20d926a089e0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "The nicest section")
   - type: hero_section
     align: left
     image_position: left
