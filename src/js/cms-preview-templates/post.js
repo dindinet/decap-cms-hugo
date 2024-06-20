@@ -2,6 +2,33 @@ import React from "react";
 import format from "date-fns/format";
 
 export default class PostPreview extends React.Component {
+  renderBlock = (block) => {
+    switch (block.name) {
+      case "hero_section":
+        return (
+          <div className="hero-section">
+            <div>{block.title}</div>
+            <div>{block.subtitle}</div>
+          </div>
+        );
+      case "image":
+        return (
+          <div className="hero-block">
+            <img src={block.src} alt={block.alt} />
+          </div>
+        );
+      case "content_section":
+        return (
+          <div className="content-section">
+            <div>{block.title}</div>
+            <div>{block.content}</div>
+          </div>
+        );
+      // Add more cases for other block types
+      default:
+        return null;
+    }
+  };
   render() {
     const {entry, widgetFor, getAsset} = this.props;
     const image = getAsset(entry.getIn(["data", "image"]));
@@ -16,6 +43,13 @@ export default class PostPreview extends React.Component {
         <p>{ entry.getIn(["data", "description"]) }</p>
         { image && <img src={ image } alt={ entry.getIn(["data", "title"])} /> }
         { widgetFor("body") }
+      </div>
+      <div>
+
+      {(entry.getIn(["data","sections"])|| []).map((block, index) => (
+            <React.Fragment key={index}>{this.renderBlock(block)}</React.Fragment>
+          ))}
+
       </div>
     </div>;
   }
