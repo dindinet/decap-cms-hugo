@@ -2,9 +2,9 @@ import React from "react";
 import format from "date-fns/format";
 
 export default class PostPreview extends React.Component {
-  renderBlock = (block,thetype) => {
+  renderBlock = (block) => {
 
-    switch (thetype) {
+    switch (block.type) {
       case "hero_section":
         return (
           <div className="hero-section">
