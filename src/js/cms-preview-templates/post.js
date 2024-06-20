@@ -53,7 +53,7 @@ export default class PostPreview extends React.Component {
 
       {(entry.getIn(["data","sections"])|| []).map((section, index) => (
             
-            <div>{section.type}</div>
+            <React.Fragment key={index}>{this.renderBlock(section)}</React.Fragment>
           ))}
 
 
