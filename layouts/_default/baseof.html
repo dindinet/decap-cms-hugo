@@ -9,9 +9,16 @@
 
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 
-    {{ $script := .Site.Data.webpack.main }}
-    {{ with $script.js }}
-      <script src="{{ relURL . }}"></script>
-    {{ end }}
+    <script>
+      const mobileMenu = document.querySelector("[data-mobile-menu]");
+      const nav = document.querySelector("[data-nav]");
+      
+      function toggleMobileMenu() {
+        nav.classList.toggle("menu-open");
+      }
+      
+      mobileMenu.addEventListener("click", toggleMobileMenu);
+      
+      </script>
   </body>
 </html>
