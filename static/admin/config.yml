@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: site/static/img
+media_folder: static/img
 public_folder: img
 collections:
   - name: post
     label: Post
-    folder: site/content/post
+    folder: content/post
     path: '{{slug}}/index'
     create: true
     fields:
@@ -185,7 +185,7 @@ collections:
   - name: pages
     label: Pages
     files:
-      - file: site/content/_index.md
+      - file: content/_index.md
         label: Home Page
         name: home
         fields:
@@ -238,7 +238,7 @@ collections:
               - label: Text
                 name: text
                 widget: text
-      - file: site/content/contact/_index.md
+      - file: content/contact/_index.md
         label: Contact Page
         name: contact
         fields:
@@ -261,7 +261,7 @@ collections:
               - label: Text
                 name: text
                 widget: text
-      - file: site/content/products/_index.md
+      - file: content/products/_index.md
         label: Products Page
         name: products
         fields:
@@ -370,7 +370,7 @@ collections:
                   - label: Items
                     name: items
                     widget: list
-      - file: site/content/values/_index.md
+      - file: content/values/_index.md
         label: Values Page
         name: values
         fields:
@@ -396,7 +396,7 @@ collections:
   - name: site_settings
     label: Site Settings
     files:
-      - file: site/data/footer.json
+      - file: data/footer.json
         label: Footer
         name: footer
         fields:
@@ -406,7 +406,7 @@ collections:
           - label: Blurb
             name: blurb
             widget: text
-      - file: site/hugo.toml
+      - file: hugo.toml
         label: Hugo Config
         name: config
         editor:
