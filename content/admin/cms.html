@@ -9,6 +9,8 @@
   <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- <script src="https://decap-cms-hugo.netlify.app/decap-cms.js"></script> -->
+    {{ $js := resources.Get "/js/cms.js" | fingerprint | js.Build (dict "minify" true "treeShake" true) }}
+<script src="{{ $js.RelPermalink }}"></script>
 </body>
 </html>
