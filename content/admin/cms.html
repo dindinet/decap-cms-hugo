@@ -6,11 +6,10 @@
 
   <title>Content Manager</title>
 
-  <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+  
 </head>
 <body>
     <!-- <script src="https://decap-cms-hugo.netlify.app/decap-cms.js"></script> -->
-    {{ $js := resources.Get "/js/cms.js" | js.Build (dict "targetPath" "admin/decap-cms.js" "minify" true "treeShake" true) }}
-<script src="{{ $js.RelPermalink }}"></script>
+
 </body>
 </html>

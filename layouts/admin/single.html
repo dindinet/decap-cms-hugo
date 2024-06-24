@@ -1,0 +1,7 @@
+{{ define "main" }}
+<script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+
+{{ $js := resources.Get "/js/cms.js" | js.Build (dict "targetPath" "admin/decap-cms.js" "minify" true "treeShake" true) }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+{{ end }}
