@@ -1,3 +1,13 @@
-{{ $shims := dict "react" "js/shims/react.js"  "react-dom" "js/shims/react-dom.js" }}
-{{ $js := resources.Get "/js/cms.js" | js.Build (dict "shims" $shims "targetPath" "admin/decap-cms.js" "loader" "jsx" "minify" true "treeShake" true) }}
+{{- $externals := slice "react" "react-dom" -}}
+{{- $opts := dict "defines" $defines "sourcemap" true "externals" $externals  -}}
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+{{ $r := "module.exports = window.React" | resources.FromString "js/shims/react.js" }}
+{{ $rd := "module.exports = window.ReactDOM" | resources.FromString "js/shims/react-dom.js" }}
+
+{{/* Call RelPermalink unnecessarily to generate JS files */}}
+{{ $placebo := slice $r.RelPermalink $rd.RelPermalink }}
+{{ $js := resources.Get "/js/cms.js" | js.Build (dict "targetPath" "admin/decap-cms.js" "loader" "jsx" "minify" true "treeShake" true) }}
 <script src="{{ $js.RelPermalink }}"></script>
