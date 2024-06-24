@@ -1,5 +1,4 @@
-{{ $opts := dict "transpiler" "libsass" "targetPath" "main.css" }}
-{{ with resources.Get "css/main.scss" | toCSS $opts  }}
+{{ with resources.Get "css/main.css"}}
   <link rel="stylesheet" href="{{ .RelPermalink }}" >
 {{ end }}
 
