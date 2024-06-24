@@ -1,0 +1,6 @@
+{{ $opts := dict "transpiler" "libsass" "targetPath" "main.css" }}
+{{ with resources.Get "css/main.scss" | toCSS $opts  }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" >
+{{ end }}
+
+<!-- | minify | fingerprint -->
