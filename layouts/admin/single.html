@@ -1,7 +1,17 @@
-{{ define "main" }}
-<script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{{ $js := resources.Get "/js/cms.js" | js.Build (dict "targetPath" "admin/decap-cms.js" "minify" true "treeShake" true) }}
-<script src="{{ $js.RelPermalink }}"></script>
+  <title>Content Manager</title>
 
-{{ end }}
+  <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+{{ partial "cms" . }}
+
+</body>
+</html>
+
