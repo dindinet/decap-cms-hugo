@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- <script src="https://decap-cms-hugo.netlify.app/decap-cms.js"></script> -->
-    {{ $js := resources.Get "/js/cms.js" | fingerprint | js.Build (dict "minify" true "treeShake" true) }}
+    {{ $js := resources.Get "/js/cms.js" | js.Build (dict "targetPath" "admin/decap-cms.js" "minify" true "treeShake" true) }}
 <script src="{{ $js.RelPermalink }}"></script>
 </body>
 </html>
