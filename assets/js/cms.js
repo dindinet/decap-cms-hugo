@@ -12,7 +12,7 @@ import ValuesPreview from "./cms-preview-templates/values";
 import ContactPreview from "./cms-preview-templates/contact";
 import FooterPreview from "./cms-preview-templates/footer";
 
-CMS.registerPreviewStyle(styles, {raw: true});
+CMS.registerPreviewStyle("https://decap-cms-hugo.netlify.app/css/main.css");
 CMS.registerPreviewTemplate("home", HomePreview);
 CMS.registerPreviewTemplate("post", PostPreview);
 CMS.registerPreviewTemplate("products", ProductsPreview);
