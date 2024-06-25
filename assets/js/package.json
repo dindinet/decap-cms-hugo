@@ -1,0 +1,17 @@
+{
+    "name": "wilton-cms-esbuild",
+    "version": "1.0.0",
+    "description": "wilton-cms-esbuild",
+    "main": "cms.js",
+    "scripts": {},
+    "author": "clarity-strategies",
+    "license": "MIT",
+    "dependencies": {
+      "date-fns": "^2.15.0",
+      "html-react-parser": "^5.1.8",
+      "marked": "^12.0.0",
+      "netlify-cms": "^2.10.96",
+      "react": "^16.9.0",
+      "react-dom": "^16.9.0"
+    }
+  }
