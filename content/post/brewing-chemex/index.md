@@ -7,10 +7,22 @@ description: Brewing with a Chemex probably seems like a complicated,
 intro: Batafarrat
 image: blog-chemex.jpg
 sections:
+  - type: hero_section
+    align: left
+    image_position: left
+    has_background: false
+    background:
+      background_color: white
+      background_image_size: cover
+      background_image_repeat: no-repeat
+    title: Chummy Pat
+    subtitle: Smiling first
+  - type: content_section
+    title: Missy Pow
+    content: Chimmy fer flopp dat
   - type: content_section
     title: Quisical
-    content: >-
-      If it were to be more ordinary then Quisical would not describe it.
+    content: If it were to be more ordinary then Quisical would not describe it.
   - type: hero_section
     align: left
     image_position: left
