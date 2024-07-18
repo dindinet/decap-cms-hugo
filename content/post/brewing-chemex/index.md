@@ -7,9 +7,9 @@ description: Brewing with a Chemex probably seems like a complicated,
 intro: Batafarrat
 image: blog-chemex.jpg
 someHTML: >-
-   <div class="container"><div class="image-column"><img src="https://picsum.photos/1200?32" alt="Description of the image"></div><div class="text-column"><h1>Your Heading</h1><p>Integer urna ante, tincidunt eget sollicitudin eget, viverra id lorem. Praesent luctus erat urna, in aliquet 
+   <div class="container"><div class="image-column"><img src="https://picsum.photos/1200/1800?32" alt="Description of the image"></div><div class="text-column"><h1>Your Heading</h1><p>Integer urna ante, tincidunt eget sollicitudin eget, viverra id lorem. Praesent luctus erat urna, in aliquet 
    massa volutpat a. Sed gravida ultricies tincidunt. Aliquam erat volutpat. Nunc gravida sollicitudin elit sed fringilla. Vivamus eu dapibus diam, sed viverra lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate ut nulla eget efficitur. Integer vel neque et justo 
-   luctus pretium. Praesent a dolor ante. Sed et sollicitudin neque. Mauris sodales tincidunt tristique. Maecenas sed tellus magna. Vestibulum massa justo, imperdiet ac laoreet id, aliquet vel libero.</p></div><div class="image-column"><img src="https://picsum.photos/1200?31" 
+   luctus pretium. Praesent a dolor ante. Sed et sollicitudin neque. Mauris sodales tincidunt tristique. Maecenas sed tellus magna. Vestibulum massa justo, imperdiet ac laoreet id, aliquet vel libero.</p></div><div class="image-column"><img src="https://picsum.photos/1200/1800?31" 
    alt="Description of the image"></div></div>
 someCSS: >-
  .container{display: flex;flex-direction: column;align-items: center;padding: 20px}.image-column,.text-column{width: 100%;padding: 20px;text-align: center}p{display: block;padding: 1rem 0}. image-column img{max-width: 100%}@media (min-width: 780px){.container{flex-direction: row;justify-content: space-between;margin-inline: auto;not-padding-block: 12rem 12rem;background: #faf9f6}.image-column,.text-column{text-align: left}.image-column img{object-fit: contain}}
