@@ -8,7 +8,7 @@
     </div>
     
     <div class="cms mw6">
-      <style>{{ replaceRE "(\\s)" ""  .Params.someCSS | safeCSS }}</style>
+      <style>{{ replaceRE "(-\s)" ""  .Params.someCSS | safeCSS }}</style>
       {{ .Params.someHTML | safeHTML }}
       <p>{{ .Description }}</p>
       {{ with .Resources.Get .Params.image }}<img src="{{ .RelPermalink }}" alt="{{ $.Title }}" />{{ end }}
