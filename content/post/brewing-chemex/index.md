@@ -12,10 +12,7 @@ someHTML: >-
    luctus pretium. Praesent a dolor ante. Sed et sollicitudin neque. Mauris sodales tincidunt tristique. Maecenas sed tellus magna. Vestibulum massa justo, imperdiet ac laoreet id, aliquet vel libero.</p></div><div class="image-column"><img src="https://picsum.photos/1200?31" 
    alt="Description of the image"></div></div>
 someCSS: >-
-   .container{display:flex;flex-direction:column;align-items:center;padding:20px;xmax-width:1300px}.image-column,.text-column{width:100%;padding:20px;text-align:center}p{display:block;padding:1rem 0}.image-column img{max- 
-   width:100%}@media(min-width:780px){.container{flex-  
-   direction:row;
-   justify-content:space-between;margin-inline:auto;padding-block:12rem 12rem;background:#faf9f6}.image-column,.text-column{bbwidth:45%;bbpadding:20px;text-align:left}.text-column{xwidth:30%}.image-column{xwidth:70%}.image-column img{object-fit:contain}}
+ .container{display: flex;flex-direction: column;align-items: center;padding: 20px}.image-column,.text-column{width: 100%;padding: 20px;text-align: center}p{display: block;padding: 1rem 0}. image-column img{max-width: 100%}@media (min-width: 780px){.container{flex-direction: row;justify-content: space-between;margin-inline: auto;padding-block: 12rem 12rem;background: #faf9f6}.image-column,.text-column{text-align: left}.image-column img{object-fit: contain}}
 sections:
   - type: hero_section
     align: left
