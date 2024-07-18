@@ -14,7 +14,7 @@ someHTML: >-
 someCSS: >-
    .container{display:flex;flex-direction:column;align-items:center;padding:20px;xmax-width:1300px}.image-column,.text-column{width:100%;padding:20px;text-align:center}p{display:block;padding:1rem 0}.image-column img{max-width:100%}@media (min-width:780px){.container{flex- 
    direction:row;justify-content:space-between;margin-inline:auto;padding-block:12rem 12rem;background:#faf9f6}.image-column,.text-column{bbwidth:45%;bbpadding:20px;text-align:left}.text-column{xwidth:30%}.image-column{xwidth:70%}.image-column img{object-fit:contain}}
-   sections:
+sections:
   - type: hero_section
     align: left
     image_position: left
