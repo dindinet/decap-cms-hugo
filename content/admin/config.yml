@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
   branch: main
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: dklongley
-    api_key: 325856925759214
-    multiple: true  
+#media_library:
+  #name: cloudinary
+  #config:
+    #cloud_name: dklongley
+    #api_key: 325856925759214
+    #multiple: true  
 media_folder: static/img
 public_folder: img
 collections:
