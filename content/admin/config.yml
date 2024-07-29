@@ -178,10 +178,10 @@ collections:
                 required: false
                 hint: The title of the section
               - name: content
-                widget: text
+                widget: markdown
                 label: Content
                 required: false
-                hint: The text content of the section
+                hint: The content of the section
               - name: type
                 widget: hidden
                 label: Object Type
